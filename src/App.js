@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
+import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom'
+// import Login from './login';
+import Update from './Routes/Update';
+import Insert from './Routes/Insert';
+import Home from './Routes/Home';
+import Display from './Routes/Display';
+import Delete from './Routes/Delete';
+
+
+ export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+      
+      <Router>
+        <div>
+        
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/display">Display</Link></li>
+                <li><Link to="/addemps">AddUsers</Link></li>
+                <li><Link to="/about">About</Link></li>
+            </ul>
+            </div>
+            <Switch>
+                <Route exact path="/" component={Home}></Route>
+                <Route path="/display" component={Display}></Route>
+                <Route path="/addemps" component={Insert}></Route>
+                <Route path="/updemp/:id" component={Update}></Route>
+                <Route path="/delemp" component={Delete}></Route>
+            </Switch>
+          </Router>
   );
 }
 
-export default App;
+
