@@ -1,6 +1,16 @@
-CRUD OPERATIONS USING REACT
+CRUD OPERATIONS USING REACTJS
 -----------------------------------------------
-![Screenshot (59)](https://user-images.githubusercontent.com/97245908/173840583-243d2ef2-bf08-461b-9349-99145a709175.png)
+Display Page
+-------------
+![Screenshot (59)](https://user-images.githubusercontent.com/97245908/173841653-54eadbe6-ef9c-4d05-b416-f1bbad9a75dc.png)
+
+ADD Data page
+---------------
+![Screenshot (60)](https://user-images.githubusercontent.com/97245908/173841982-eeaddfd1-d32a-43d8-99db-53ef2c61d477.png)
+
+Update Page
+---------------
+![Screenshot (61)](https://user-images.githubusercontent.com/97245908/173842088-1609c280-9fbe-41fc-a7a5-899c7cb013bc.png)
 
 
 
