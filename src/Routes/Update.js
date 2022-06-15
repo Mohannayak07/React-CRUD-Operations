@@ -4,7 +4,7 @@ import {useState,useEffect} from "react";
 import { useHistory,Link} from "react-router-dom";
 import { useParams } from "react-router-dom";
 // import Display from "./Display";
-// import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom'
+// import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom' 
 export default function Update(){
     const {id}=useParams();
     let history=useHistory();
@@ -23,11 +23,14 @@ export default function Update(){
         // e.preventDefault();
         await axios.put(`http://localhost:2000/updemp/${id}`,user)
         alert('User Updated Successfully...')
-        history.push('/display')
-        .then(res=>{
-            setUser(res.data)
-            console.log(res.data)
-        })
+            history.push('/display')
+            .then(res=>{
+                setUser(res.data)
+                console.log(res.data)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
     }
     async function loaduser(){
         const res=await axios.get(`http://localhost:2000/emps/${id}`)
